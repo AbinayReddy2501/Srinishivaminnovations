@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technologies - Srinishivam Innovations</title>
+    <title>Srinishivam Innovations - Technologies</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
-        <img src="https://ibb.co/hLJ9Ggj" alt="Srinishivam Innovations Logo" class="logo">
+        <img src="https://i.postimg.cc/c4LPgLFH/Screenshot-20240810-003930-Chrome.jpg" alt="Srinishivam Innovations Logo" class="logo">
         <nav>
+            <div class="menu-toggle">☰</div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
@@ -23,19 +26,34 @@
     </header>
 
     <section id="technologies">
-        <h2>Technologies We Use</h2>
-        <ul>
-            <li><strong>Front-End Development:</strong> HTML, CSS, JavaScript, React, Angular</li>
-            <li><strong>Back-End Development:</strong> Node.js, Python, Java, .NET, Ruby on Rails</li>
-            <li><strong>Database Management:</strong> MySQL, PostgreSQL, MongoDB, Oracle, SQL Server</li>
-            <li><strong>Cloud Platforms:</strong> AWS, Azure, Google Cloud</li>
-            <li><strong>AI & Machine Learning:</strong> TensorFlow, PyTorch, OpenAI, Scikit-learn</li>
-            <li><strong>DevOps & CI/CD:</strong> Docker, Kubernetes, Jenkins, GitHub Actions</li>
-        </ul>
+        <div class="container">
+            <h2>Technologies We Use</h2>
+            <p>At Srinishivam Innovations, we harness the power of cutting-edge technologies to deliver superior results. Our expertise includes:</p>
+            <ul>
+                <li>Artificial Intelligence and Machine Learning</li>
+                <li>Cloud Computing</li>
+                <li>Full-Stack Web Development (HTML, CSS, JavaScript, React, Node.js)</li>
+                <li>Mobile App Development (iOS, Android, React Native)</li>
+                <li>Data Analytics and Big Data</li>
+                <li>Cybersecurity</li>
+            </ul>
+        </div>
     </section>
 
     <footer>
         <p>&copy; 2024 Srinishivam Innovations. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navUl = document.querySelector('nav ul');
+
+            menuToggle.addEventListener('click', function() {
+                navUl.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
+
 </html>
