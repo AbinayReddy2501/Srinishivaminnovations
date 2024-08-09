@@ -17,7 +17,7 @@
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            background-color: #ffe0e0;
+            background-color: rgb(251, 234, 190); /* Background color */
             color: #555;
         }
 
@@ -35,8 +35,8 @@
         }
 
         header .logo {
-            width: 250px; /* Increase the width */
-            height: auto; /* Maintain aspect ratio */
+            width: 250px; /* Logo size for larger screens */
+            height: auto;
         }
 
         nav ul {
@@ -205,7 +205,7 @@
         /* Responsive Design */
         @media (max-width: 768px) {
             header .logo {
-                width: 0px; /* Adjust logo size for smaller screens */
+                width: 150px; /* Decrease logo size for smaller screens */
             }
 
             header h1 {
@@ -245,7 +245,7 @@
 
 <body>
     <header>
-        <img src="https://i.postimg.cc/c4LPgLFH/Screenshot-20240810-003930-Chrome.jpg" alt="Srinishivam Innovations Logo">
+        <img src="https://i.postimg.cc/c4LPgLFH/Screenshot-20240810-003930-Chrome.jpg" alt="Srinishivam Innovations Logo" class="logo">
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -288,8 +288,7 @@
                 <h3>Digital Marketing</h3>
                 <p>Strategic digital marketing to enhance your online presence.</p>
             </div>
-        </div>
-    </section>
+            </section>
 
     <section id="about">
         <div class="container">
