@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sustainability - Srinishivam Innovations</title>
+    <title>Srinishivam Innovations - Sustainability</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
-        <img src="https://ibb.co/hLJ9Ggj" alt="Srinishivam Innovations Logo" class="logo">
+        <img src="https://i.postimg.cc/c4LPgLFH/Screenshot-20240810-003930-Chrome.jpg" alt="Srinishivam Innovations Logo" class="logo">
         <nav>
+            <div class="menu-toggle">☰</div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
@@ -23,18 +26,32 @@
     </header>
 
     <section id="sustainability">
-        <h2>Our Commitment to Sustainability</h2>
-        <p>At Srinishivam Innovations, we are committed to sustainable practices in all aspects of our business. We believe in creating digital solutions that are not only innovative but also environmentally responsible.</p>
-        <ul>
-            <li><strong>Energy Efficiency:</strong> We optimize our infrastructure to minimize energy consumption.</li>
-            <li><strong>Green Hosting:</strong> We partner with eco-friendly data centers for web hosting.</li>
-            <li><strong>Recycling Initiatives:</strong> We actively participate in and promote recycling initiatives within our office.</li>
-            <li><strong>Remote Work:</strong> Encouraging remote work to reduce our carbon footprint.</li>
-        </ul>
+        <div class="container">
+            <h2>Sustainability Initiatives</h2>
+            <p>Sustainability is at the heart of what we do. We are committed to reducing our carbon footprint and implementing eco-friendly practices throughout our operations. Our initiatives include:</p>
+            <ul>
+                <li>Energy-efficient data centers</li>
+                <li>Waste reduction programs</li>
+                <li>Recycling and reuse policies</li>
+                <li>Partnerships with green organizations</li>
+            </ul>
+        </div>
     </section>
 
     <footer>
         <p>&copy; 2024 Srinishivam Innovations. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navUl = document.querySelector('nav ul');
+
+            menuToggle.addEventListener('click', function() {
+                navUl.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
+
 </html>
