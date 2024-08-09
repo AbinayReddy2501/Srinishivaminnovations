@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Team - Srinishivam Innovations</title>
+    <title>Srinishivam Innovations - Team</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
-        <img src="https://ibb.co/hLJ9Ggj" alt="Srinishivam Innovations Logo" class="logo">
+        <img src="https://i.postimg.cc/c4LPgLFH/Screenshot-20240810-003930-Chrome.jpg" alt="Srinishivam Innovations Logo" class="logo">
         <nav>
+            <div class="menu-toggle">☰</div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
@@ -23,50 +26,37 @@
     </header>
 
     <section id="team">
-        <h2>Meet the Team</h2>
-        <div class="team-member">
-            <img src="https://ibb.co/qnRc0Vg" alt="Sreekar Reddy">
-            <h3>Sreekar Reddy</h3>
-            <p>"At Srinishivam Innovations, we push the boundaries of technology to deliver solutions that exceed expectations."</p>
-            <p class="role">Managing Director</p>
-        </div>
-        <div class="team-member">
-            <img src="https://ibb.co/yd59K3K" alt="Abinay Reddy">
+        <div class="container">
+            <h2>Meet the Team</h2>
+            <div class="team-member">
+                <img src="https://i.postimg.cc/ZCDMbpyg/Sreekar-Reddy.jpg" alt="Sreekar Reddy">
+                <h3>Sreekar Reddy</h3>
+                <p>"At Srinishivam Innovations, we push the boundaries of technology to deliver solutions that exceed expectations."</p>
+                <p class="role">Managing Director</p>
+            </div>
+            <div class="team-member">
+                <img src="https://i.postimg.cc/NM2W0JDx/IMG-3732-2.jpg" alt="Abinay Reddy">
             <h3>Abinay Reddy</h3>
-            <p>"Our goal is to turn innovative ideas into powerful digital solutions, driving success for our clients and shaping the future of technology."</p>
-            <p class="role">Chief Executive Officer</p>
+                <p>"We are committed to turning your digital visions into reality through innovation and expertise."</p>
+                <p class="role">CEO</p>
+            </div>
         </div>
-        <div class="team-member">
-            <h3>Chetireddy Sreesharan Reddy</h3>
-            <p class="role">Chief Innovation Officer</p>
-        </div>
-        <div class="team-member">
-            <h3>Kasireddy Nishith Reddy</h3>
-            <p class="role">Chief Operating Officer</p>
-        </div>
-        <div class="team-member">
-            <h3>Chetireddy Srinivas Reddy</h3>
-            <p class="role">Director</p>
-        </div>
-        <div class="team-member">
-            <h3>Kasireddy Srinivas Reddy</h3>
-            <p class="role">Director</p>
-        </div>
-        
-        <div class="team-member">
-            <h3>Chetireddy Udaya Sri</h3>
-            <p class="role">Director</p>
-        </div>
-        <div class="team-member">
-            <h3>Kasi Reddy Swapna Latha</h3>
-            <p class="role">Director</p>
-        </div>
-
     </section>
 
     <footer>
         <p>&copy; 2024 Srinishivam Innovations. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navUl = document.querySelector('nav ul');
+
+            menuToggle.addEventListener('click', function() {
+                navUl.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
+
 </html>
-        
