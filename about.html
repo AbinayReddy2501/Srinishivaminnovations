@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Srinishivam Innovations</title>
+    <title>Srinishivam Innovations - About Us</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
-        <img src="https://ibb.co/hLJ9Ggj" alt="Srinishivam Innovations Logo" class="logo">
+        <img src="https://i.postimg.cc/c4LPgLFH/Screenshot-20240810-003930-Chrome.jpg" alt="Srinishivam Innovations Logo" class="logo">
         <nav>
+            <div class="menu-toggle">☰</div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
@@ -23,16 +26,26 @@
     </header>
 
     <section id="about">
-        <h2>About Us</h2>
-        <p>Srinishivam Innovations is dedicated to transforming visions into digital realities. We offer cutting-edge technology solutions to drive growth and success for our clients.</p>
-        <h3>Mission</h3>
-        <p>To leverage technology and innovation to create impactful digital solutions that drive growth and success for our clients and stakeholders.</p>
-        <h3>Vision</h3>
-        <p>To be a leading global technology partner recognized for transforming ideas into digital excellence and shaping the future of technology.</p>
+        <div class="container">
+            <h2>About Us</h2>
+            <p>At Srinishivam Innovations, we are driven by our mission to transform businesses through innovative technology solutions. Our vision is to become a leader in the tech industry, providing unparalleled services that exceed our clients' expectations.</p>
+        </div>
     </section>
 
     <footer>
         <p>&copy; 2024 Srinishivam Innovations. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navUl = document.querySelector('nav ul');
+
+            menuToggle.addEventListener('click', function() {
+                navUl.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
+
 </html>
