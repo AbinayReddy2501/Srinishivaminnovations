@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Srinishivam Innovations</title>
+    <title>Srinishivam Innovations - Home</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
-        <img src="https://ibb.co/hLJ9Ggj" alt="Srinishivam Innovations Logo" class="logo">
+        <img src="https://i.postimg.cc/c4LPgLFH/Screenshot-20240810-003930-Chrome.jpg" alt="Srinishivam Innovations Logo" class="logo">
         <nav>
+            <div class="menu-toggle">☰</div>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="services.html">Services</a></li>
@@ -22,15 +25,26 @@
         </nav>
     </header>
 
-    <section id="home">
+    <div class="hero">
         <h2>Welcome to Srinishivam Innovations</h2>
-        <p>Your partner in turning visions into digital realities.</p>
-        <a href="services.html" class="cta-button">Our Services</a>
+        <p>Innovate Your Digital Vision with our cutting-edge solutions.</p>
         <a href="contact.html" class="cta-button">Get in Touch</a>
-    </section>
+    </div>
 
     <footer>
         <p>&copy; 2024 Srinishivam Innovations. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navUl = document.querySelector('nav ul');
+
+            menuToggle.addEventListener('click', function() {
+                navUl.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
+
 </html>
