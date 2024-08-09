@@ -17,7 +17,7 @@
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            background-color: rgb(251, 234, 190); /* Background color */
+            background-color: #ffe0e0;
             color: #555;
         }
 
@@ -32,11 +32,17 @@
             top: 0;
             width: 100%;
             z-index: 1000;
+            position: relative;
         }
 
         header .logo {
-            width: 650px; /* Logo size for larger screens */
+            width: 650px; /* Adjusted for better responsive scaling */
             height: auto;
+        }
+
+        /* Navigation Menu */
+        nav {
+            position: relative;
         }
 
         nav ul {
@@ -47,6 +53,8 @@
             background-color: #ff6f61; /* Red background for navigation */
             margin: 0;
             border-radius: 5px;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
         }
 
         nav ul li {
@@ -63,6 +71,41 @@
 
         nav ul li a:hover {
             color: #ffe0e0; /* Lighter red on hover */
+        }
+
+        /* Hamburger Menu */
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            background: #ff6f61;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+
+        .menu-toggle:hover {
+            background: #e64a19;
+        }
+
+        /* Dropdown Menu */
+        .dropdown-menu {
+            display: none;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .dropdown-menu li {
+            text-align: center;
+            border-top: 1px solid #ddd;
+        }
+
+        .dropdown-menu li:first-child {
+            border-top: none;
+        }
+
+        .dropdown-menu.active {
+            display: flex;
         }
 
         /* Hero section */
@@ -204,16 +247,24 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            header .logo {
-                width: 250px; /* Decrease logo size for smaller screens */
-            }
-
-            header h1 {
-                font-size: 2rem;
+            .menu-toggle {
+                display: block;
             }
 
             nav ul {
+                display: none; /* Hide menu by default */
                 flex-direction: column;
+                max-height: 0;
+                overflow: hidden;
+            }
+
+            nav ul.active {
+                display: flex;
+                max-height: 300px; /* Adjust based on menu height */
+            }
+
+            header .logo {
+                width: 150px; /* Adjust logo size for smaller screens */
             }
 
             nav ul li {
@@ -245,7 +296,8 @@
 
 <body>
     <header>
-        <img src="https://i.postimg.cc/c4LPgLFH/Screenshot-20240810-003930-Chrome.jpg" alt="Srinishivam Innovations Logo" class="logo">
+        <img class="logo" src="https://i.postimg.cc/c4LPgLFH/Screenshot-20240810-003930-Chrome.jpg" alt="Srinishivam Innovations Logo">
+        <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -264,7 +316,6 @@
         <p>Innovate Your Digital Vision with our cutting-edge solutions.</p>
         <a href="#contact" class="cta-button">Get in Touch</a>
     </div>
-
     <section id="services">
         <div class="container">
             <h2>Our Services</h2>
@@ -288,7 +339,8 @@
                 <h3>Digital Marketing</h3>
                 <p>Strategic digital marketing to enhance your online presence.</p>
             </div>
-            </section>
+        </div>
+    </section>
 
     <section id="about">
         <div class="container">
@@ -365,6 +417,18 @@
     <footer>
         <p>&copy; 2024 Srinishivam Innovations. All rights reserved.</p>
     </footer>
+
+    <script>
+        // JavaScript for toggle menu
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navUl = document.querySelector('nav ul');
+
+            menuToggle.addEventListener('click', function() {
+                navUl.classList.toggle('active');
+            });
+        });
+    </script>
 </body>
 
 </html>
