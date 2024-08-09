@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srinishivam Innovations</title>
+    <style>
+        /* Reset and box-sizing */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #fff;
+            color: #333;
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        header img {
+            width: 150px;
+            height: auto;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #f4b400;
+        }
+
+        /* Hero section */
+        .hero {
+            color: #333;
+            padding: 5rem 1rem;
+            text-align: center;
+            background: url('https://source.unsplash.com/random/1920x1080') no-repeat center center/cover;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeIn 2s ease-out;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            animation: fadeIn 2s ease-out 0.5s;
+        }
+
+        .cta-button {
+            background: #f4b400;
+            color: #333;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.2rem;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #f4a300;
+        }
+
+        /* Sections */
+        section {
+            padding: 3rem 1rem;
+            background: #fff;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* About and Services */
+        .service-item {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            border-radius: 8px;
+            background: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-member {
+            text-align: center;
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            border-radius: 8px;
+            background: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-member h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .team-member p {
+            color: #555;
+        }
+
+        .team-member img {
+            width: 150px;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+
+        /* Form */
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        input,
+        textarea {
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 0.75rem;
+            border: none;
+            background: #333;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #555;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header img {
+                width: 120px;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="https://i.postimg.cc/L4cZhJ9k/Screenshot-20240810-003930-Chrome.jpg" alt="Srinishivam Innovations Logo">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#technologies">Technologies</a></li>
+                <li><a href="#sustainability">Sustainability</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="home" class="hero">
+        <h2>Welcome to Srinishivam Innovations</h2>
+        <p>Innovate Your Digital Vision with our cutting-edge solutions.</p>
+        <a href="#contact" class="cta-button">Get in Touch</a>
+    </div>
+
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-item">
+                <h3>Full-Stack Software Solutions</h3>
+                <p>End-to-end software development tailored to your business needs.</p>
+            </div>
+            <div class="service-item">
+                <h3>AI-Based Software Development</h3>
+                <p>Innovative AI solutions to elevate your business processes.</p>
+            </div>
+            <div class="service-item">
+                <h3>Web Development and Design</h3>
+                <p>Responsive and visually appealing websites for your brand.</p>
+            </div>
+            <div class="service-item">
+                <h3>App Design and Development</h3>
+                <p>Custom mobile applications that engage and convert users.</p>
+            </div>
+            <div class="service-item">
+                <h3>Digital Marketing</h3>
+                <p>Strategic digital marketing to enhance your online presence.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>At Srinishivam Innovations, we are driven by our mission to transform businesses through innovative technology solutions. Our vision is to become a leader in the tech industry, providing unparalleled services that exceed our clients' expectations.</p>
+        </div>
+    </section>
+
+    <section id="team">
+        <div class="container">
+            <h2>Meet the Team</h2>
+            <div class="team-member">
+                <img src="https://i.postimg.cc/ZCDMbpyg/Sreekar-Reddy.jpg" alt="Sreekar Reddy">
+                <h3>Sreekar Reddy</h3>
+                <p>"At Srinishivam Innovations, we push the boundaries of technology to deliver solutions that exceed expectations."</p>
+                <p class="role">Managing Director</p>
+            </div>
+            <div class="team-member">
+                <img src="https://i.postimg.cc/yd59K3K/Abinay-Reddy.jpg" alt="Abinay Reddy">
+                <h3>Abinay Reddy</h3>
+                <p>"We are committed to turning your digital visions into reality through innovation and expertise."</p>
+                <p class="role">CEO</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="technologies">
+        <div class="container">
+            <h2>Technologies We Use</h2>
+            <p>At Srinishivam Innovations, we harness the power of cutting-edge technologies to deliver superior results. Our expertise includes:</p>
+            <ul>
+                <li>Artificial Intelligence and Machine Learning</li>
+                <li>Cloud Computing</li>
+                <li>Full-Stack Web Development (HTML, CSS, JavaScript, React, Node.js)</li>
+                <li>Mobile App Development (iOS, Android, React Native)</li>
+                <li>Data Analytics and Big Data</li>
+                <li>Cybersecurity</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="sustainability">
+        <div class="container">
+            <h2>Sustainability Initiatives</h2>
+            <p>Sustainability is at the heart of what we do. We are committed to reducing our carbon footprint and implementing eco-friendly practices throughout our operations. Our initiatives include:</p>
+            <ul>
+                <li>Energy-efficient data centers</li>
+                <li>Waste reduction programs</li>
+                <li>Recycling and reuse policies</li>
+                <li>Partnerships with green organizations</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or would like to learn more about our services, please don't hesitate to get in touch. Fill out the form below, and we'll get back to you as soon as possible.</p>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Srinishivam Innovations. All rights reserved.</p>
+    </footer>
+</body>
+
+</html><div class="team-member">
+                <img src="https://i.postimg.cc/NM2W0JDx/IMG-3732-2.jpg" alt="Abinay Reddy">
+                <h3>Abinay Reddy</h3>
+                <p>"We are committed to turning your digital visions into reality through innovation and expertise."</p>
+                <p class="role">CEO</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="technologies">
+        <div class="container">
+            <h2>Technologies We Use</h2>
+            <p>At Srinishivam Innovations, we harness the power of cutting-edge technologies to deliver superior results. Our expertise includes:</p>
+            <ul>
+                <li>Artificial Intelligence and Machine Learning</li>
+                <li>Cloud Computing</li>
+                <li>Full-Stack Web Development (HTML, CSS, JavaScript, React, Node.js)</li>
+                <li>Mobile App Development (iOS, Android, React Native)</li>
+                <li>Data Analytics and Big Data</li>
+                <li>Cybersecurity</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="sustainability">
+        <div class="container">
+            <h2>Sustainability Initiatives</h2>
+            <p>Sustainability is at the heart of what we do. We are committed to reducing our carbon footprint and implementing eco-friendly practices throughout our operations. Our initiatives include:</p>
+            <ul>
+                <li>Energy-efficient data centers</li>
+                <li>Waste reduction programs</li>
+                <li>Recycling and reuse policies</li>
+                <li>Partnerships with green organizations</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or would like to learn more about our services, please don't hesitate to get in touch. Fill out the form below, and we'll get back to you as soon as possible.</p>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Srinishivam Innovations. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
